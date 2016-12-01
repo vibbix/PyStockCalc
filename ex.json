@@ -1,0 +1,44 @@
+[
+  {
+    "name": "wall street bets",
+    "stocks": [
+      {
+        "symbol": "AMD",
+        "own": 55
+      },
+      {
+        "symbol": "GE",
+        "own": 55
+      },
+      {
+        "symbol": "MSFT",
+        "own": 55
+      },
+      {
+        "symbol": "APL",
+        "own": 3
+      }
+    ]
+  },
+  {
+    "name": "max",
+    "stocks": [
+      {
+        "symbol": "AMD",
+        "own":120
+      },
+      {
+        "symbol": "GE",
+        "own": 45
+      },
+      {
+        "symbol": "MSFT",
+        "own": 39
+      },
+      {
+        "symbol": "APL",
+        "own": 5
+      }
+    ]
+  }
+]
