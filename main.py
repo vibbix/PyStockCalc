@@ -9,10 +9,13 @@ def main():
     importfile = 'ex.json' if len(sys.argv) == 1 else sys.argv[1]
     portfolios = [Portfolio]
     with open(importfile) as jsonfile:
-        portfolios = json.loads(jsonfile.read())
-    print(portfolios)
-    dc = FinanceAPI.getdailychange("amd", "2016-11-01", '2016-11-30')
-    print(dc)
+        p = json.loads(jsonfile.read())
+        portfolios = Portfolio.getportfolios(p)
+    results = {} # [{"name": str, "profitdelta": [float]}]
+    for portfolio in portfolios[1:]:
+        cresult = {}
+        cresult["name"] = portfolio.name
+        cresult["profitdelta"] =  [float]
 
 
 if __name__ == "__main__" : main()

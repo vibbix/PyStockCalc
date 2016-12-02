@@ -4,19 +4,19 @@
     "stocks": [
       {
         "symbol": "AMD",
-        "own": 55
+        "own": 100
       },
       {
         "symbol": "GE",
-        "own": 55
+        "own": 100
       },
       {
         "symbol": "MSFT",
-        "own": 55
+        "own": 100
       },
       {
         "symbol": "APL",
-        "own": 3
+        "own": 100
       }
     ]
   },
@@ -25,19 +25,19 @@
     "stocks": [
       {
         "symbol": "AMD",
-        "own":120
+        "own": 550
       },
       {
         "symbol": "GE",
-        "own": 45
+        "own": 67
       },
       {
         "symbol": "MSFT",
-        "own": 39
+        "own": 324
       },
       {
         "symbol": "APL",
-        "own": 5
+        "own": 123
       }
     ]
   }

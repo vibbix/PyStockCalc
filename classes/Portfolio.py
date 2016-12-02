@@ -11,6 +11,7 @@ class Stock(object):
         self.symbol = symbol
         self.own = own
 
+
 # Portfolio class
 class Portfolio(object):
     def __init__(self):
@@ -23,13 +24,14 @@ class Portfolio(object):
 
     def __init__(self, j):
         self.name = j["name"]
-        self.stocks = List[Stock]
+        self.stocks = [Stock]
         for st in j["stocks"]:
-            self.stocks += Stock(st["symbol"], st["own"])
+            self.stocks.append(Stock(st["symbol"], int(st["own"])))
 
 
-def GetPortfolios(j):
+def getportfolios(j):
     portfolios = [Portfolio]
-    for portfolio in j:
-        portfolios += Portfolio(portfolio)
+    for cportfolio in j:
+        print(cportfolio)
+        portfolios.append(Portfolio(cportfolio))
     return portfolios
