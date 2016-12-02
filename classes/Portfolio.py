@@ -1,5 +1,5 @@
-from typing import List
-
+from datetime import datetime
+from classes import Utilities
 
 # Stock class, holds the stock ticker name and
 class Stock(object):
@@ -16,9 +16,9 @@ class Stock(object):
 class Portfolio(object):
     def __init__(self):
         self.name = str
-        self.stocks = List[Stock]
+        self.stocks = [Stock]
 
-    def __init__(self, name: str, stocks: List[Stock]):
+    def __init__(self, name: str, stocks: [Stock]):
         self.name = name
         self.stocks = stocks
 
@@ -35,3 +35,23 @@ def getportfolios(j):
         print(cportfolio)
         portfolios.append(Portfolio(cportfolio))
     return portfolios
+
+
+class DailyProfit(object):
+    def __init__(self):
+        self.name = str
+        self.profitdelta = [float]
+        self.daterange = (datetime, datetime)
+
+
+    def setdaterange(self, dr : (str, str)):
+        dr1 = Utilities.verifydate(dr[0])
+        dr2 = Utilities.verifydate(dr[0])
+        self.daterange = (dr1, dr2)
+
+    # dp is a list daily profits
+    def merge(self, dp: []):
+        dps = [self.profitdelta]
+        for cdp in dp:
+            dps.append(cdp.profitdelta)
+        self.profitdelta = Utilities.ziparrays(dps[1:])
